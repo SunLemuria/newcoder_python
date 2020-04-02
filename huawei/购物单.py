@@ -1,3 +1,5 @@
+# https://www.nowcoder.com/profile/364647022/codeBookDetail?submissionId=68713765 @陀螺酱的答案
+
 N, M = 3200, 60
 f = [0] * N
 # 分组背包，每组有四种情况，a.主件 b.主件+附件1 c.主件+附件2 d.主件+附件1+附件2
