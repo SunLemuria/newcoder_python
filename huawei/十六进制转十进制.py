@@ -1,10 +1,7 @@
 def convert(n):
     d = 0
     for c in n:
-        if ord(c) >= 65:
-            num = 10 + ord(c) - 65
-        else:
-            num = ord(c) - 48
+        num = 10 + ord(c) - 65 if ord(c) >= 65 else ord(c) - 48
         d = d * 16 + num
     print(d)
 

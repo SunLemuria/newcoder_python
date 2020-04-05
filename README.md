@@ -1,1 +1,11 @@
-# newcoder_python
+#### not easy to understand
+**24点**
+
+**购物单**
+
+#### 可以有更好实现:
+**字典序排列可以用Trie树**
+
+**最长公共子串**
+
+****
