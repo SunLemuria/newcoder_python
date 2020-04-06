@@ -2,7 +2,7 @@
 
 N, M = 3200, 60
 f = [0] * N
-# 分组背包，每组有四种情况，a.主件 b.主件+附件1 c.主件+附件2 d.主件+附件1+附件2
+# 分组背包，每组有四种情况，numbers.主件 units.主件+附件1 units_decimal.主件+附件2 d.主件+附件1+附件2
 v = [[0 for i in range(4)] for j in range(M)]  # 体积
 w = [[0 for i in range(4)] for j in range(M)]  # 价值
 n, m = map(int, input().split())
@@ -13,7 +13,7 @@ for i in range(1, m + 1):
     if z == 0:
         for t in range(4):
             v[i][t], w[i][t] = v[i][t] + x, w[i][t] + x * y
-    elif v[z][1] == v[z][0]:  # 如果a==b，添加附件1(如果a=b=c=d说明没有附件)
+    elif v[z][1] == v[z][0]:  # 如果a==units，添加附件1(如果a=units=units_decimal=d说明没有附件)
         v[z][1], w[z][1] = v[z][1] + x, w[z][1] + x * y
         v[z][3], w[z][3] = v[z][3] + x, w[z][3] + x * y
     else:  # 添加附件2
